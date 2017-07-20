@@ -1,32 +1,10 @@
-# EMA
-E.xtremely M.odular A.PI
+# PEP
+P.ioneer E.MA P.rototype
 
-### How to compile this project:
+Please see the [EMA README](https://github.com/SaplingStudios/EMA/blob/master/README.md) for how to compile this project.
 
-If this is being compiled on the Bash For Windows Subsystem, make sure to first follow [these](https://solarianprogrammer.com/2017/05/04/building-gcc-wsl-windows-subsystem-linux/) steps.
+### Project Description:
 
-This project is dependent on the libreadline-dev package and SFML (or equivalent). On Debian-based systems, or similar, use:
-```sudo apt-get install libreadline-dev libsfml-dev```
+PEP is designed to be a peppy little example/proof of concept for EMA.  Additionally, since PEP is the very first project being made with EMA, it will naturally challenge EMA's capabilities and allow me to expand EMA into what I see it to be in my mind.
 
-First, clone the repo.  From inside EMA/, run the command "make" (or "make linux" if not compile on the Bash For Windows Subsystem), this will build the PluginManager/Compiler, which will assist in building the rest of the game.
- - Note: This will only compile with versions of gcc that support c++17.
-
- Now that you have the compiler, you can use the help menu in that interface to learn about the various commands that you can use.  In short: ```enable <pluginName>``` for whatever plugins you want to use, ```save``` that list so you don't have to enable all the plugins you want every time, ```compile```, then ```exit```.
-
----
-
- Alternatively, one can create their own compile command in the structure of:
-```bash
-g++ -Wall -Wextra -pedantic -std=c++1y <Main/Internal Dependencies> <Plugin Dependencies> -o main
-```
-...making sure that "Compiler/pluginTypes.h" has/includes all types defined in desired plugins, for example use this file:
-```c++
-    #ifndef SIM_PLUGIN_TYPES
-    #define SIM_PLUGIN_TYPES 1
-    #include "../Plugins/datTest/datTestTypes.h"
-    #endif
-```
-...with this command:
-```bash
-g++ -Wall -Wextra -pedantic -std=c++1y Main/main.cpp Main/dataStructure.cpp Main/Entity.cpp Plugins/datTest/datTestTypes.cpp -o main
-```
+PEP will take place on a medium-small island that will have one or two species each of plants and animals. These organisms will not be the only thing that is alive however, since they depend on the world around them for nourishment; the sun will heat the earth, which will keep the air around the organisms warm: rich veins of water will run underground, providing the plants with the nutrients they need through their roots: and even air will move as it should, spreading the pollen and seeds of the plants around, helping them reproduce.
