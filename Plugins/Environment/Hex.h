@@ -1,3 +1,5 @@
+//class Universe;
+
 class Hex : public HexInternals
 {
 public:
@@ -5,6 +7,17 @@ public:
     Hex(const unsigned int col, const unsigned int row, const double hexRadius);
 
     virtual void update(unsigned int resolution) override;
-//private:
+
+    void setUniverseData(Universe* universe);
+private:
+  Universe* universeData = nullptr;
+
+  //Temperatures in K
+  double tempGround;
+  double tempAir;
+
+  //Light levels are percentages
+  double light;
+
 
 };

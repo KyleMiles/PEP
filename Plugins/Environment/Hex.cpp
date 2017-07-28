@@ -3,3 +3,8 @@ Bin::Hex::Hex(const unsigned int col, const unsigned int row, const double hexRa
  : HexInternals(col, row, hexRadius) {}
 
 void Bin::Hex::update(unsigned int resolution) {if (resolution) {}}
+
+void Bin::Hex::setUniverseData(Universe* universe)
+{
+  universeData = universe;
+}
