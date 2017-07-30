@@ -2,7 +2,7 @@
 
 Universe::Universe(const double x, const double y, Bin* const bin)
  : Entity::Entity(x, y, bin), //Needs no real location on the map
-   orbitDiameter(orbitRadius*6.28), orbitSpeed(sqrt(double(orbitRadius^3)/( exp(6.67408*10, -11)*double((planetMass)+(sunMass)))))
+   orbitDiameter(orbitRadius*6.28), orbitSpeed(1.0/sqrt(double(orbitRadius^3)/( exp(6.67408*10, -11)*double((planetMass)+(sunMass)))))
 {
 
 }
